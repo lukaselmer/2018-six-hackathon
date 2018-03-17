@@ -8,6 +8,18 @@ import * as figo from "figo";
 import * as R from "r-script";
 import * as firebase from "firebase";
 
+const config = {
+    apiKey: 'AIzaSyDd7LzhPE4iCunAmldCA7wrKu5MoruRslw',
+    authDomain: 'six-hackathon.firebaseapp.com',
+    databaseURL: 'https://six-hackathon.firebaseio.com',
+    projectId: 'six-hackathon',
+    storageBucket: 'six-hackathon.appspot.com',
+    messagingSenderId: '1058451606912'
+  };
+firebase.initializeApp(config);
+
+const database = firebase.database();
+
 export const dreamsPrediction = functions.https.onRequest((request, res) => {
 
   // Demo client
@@ -36,41 +48,41 @@ function get_transactions(res, access_token, connection) {
     if (error) {
       console.error(error);
     } else {
-      const transaction_csv = '';
+
       const transactions_R = [{}]; 
       let i = 0;
 
+      console.log(transactions[0].booking_date);
+
       transactions.forEach(function (transaction) {
         var t = [{}]; 
-        // Do whatever you want
-        //transaction_csv = transaction_csv + 
-         /* + ';' + transaction.name
-          + ';' + transaction.amount
-          + ';' + transaction.currency + "\n";*/
-        transactions_R[i] = {
 
-          booking_date : transaction.booking_date,
-          booking_text: transaction.booking_text
+        transactions_R[i] = {
+          booking_text  : transaction.booking_text,
+          booking_date : transaction.booking_date.toISOString().substring(0, 10),
+          id          : transaction.transaction_id,
+          name          : transaction.name,
+          amount        : transaction.amount,      
+          currency      : transaction.currency
         };
         i++;
       });
-      //res.send(transaction_csv);
-
-      // Write to Firebase
-
-
-
-      // Call R to create cashflow predictions
-      R("src/cash-prediction.R").data(
-          { transactions: transactions_R[0], 
-            nGroups: 3, 
-            fxn: "mean" }
+      
+      // Write to Firebase, Read from R, Direct handover not possible JSON too large
+      database.ref('api/transactions/').set( transactions_R ).then(() => {
+            // Call R to create cashflow predictions
+            R("src/cash-prediction.R").data(
+                { transactions: transactions_R[0], 
+                nGroups: 3, 
+                fxn: "mean" }
+                
+            ).call(function(err, d) {
+            if (err) throw err;
             
-      ).call(function(err, d) {
-        if (err) throw err;
-        
-        res.send(d);
+            res.status(200).send(d);
+            });
       });
+    
     }
   });
 
