@@ -8,6 +8,7 @@ import { database } from 'firebase';
 import { DBStructure } from './interfaces/db';
 import { Toolbar, AppBar, IconButton, Typography } from 'material-ui';
 import { AccountCircle, Menu as MenuIcon } from 'material-ui-icons';
+const logo = require('./logo.svg');
 
 type S = { db: DBStructure };
 
@@ -33,13 +34,13 @@ export default class App extends React.Component<{}, S> {
 
     return (
       <div>
-        <AppBar position="static">
+        <AppBar style={{backgroundColor: '#e91e63'}} position="static">
           <Toolbar>
             <IconButton color="inherit" aria-label="Menu">
               <MenuIcon />
             </IconButton>
             <Typography style={{ flexGrow: 1 }} variant="title" color="inherit">
-              TODO: add logo
+              <img style={{marginLeft: '20px'}} src={logo}/>
             </Typography>
             <div>
               <IconButton color="inherit">
