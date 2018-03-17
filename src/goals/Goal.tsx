@@ -2,19 +2,20 @@ import * as React from 'react';
 import { database } from 'firebase';
 import * as db from '../interfaces/db';
 
+type P = { match: { params: { id: string } } };
 type S = { goal: db.Goal | undefined };
 
-export default class Goal extends React.Component<{}, S> {
+export default class Goal extends React.Component<P, S> {
   firebaseRef: database.Reference;
   firebaseCallback: (a: firebase.database.DataSnapshot | null, b?: string) => string;
 
-  constructor(props: {}) {
+  constructor(props: P) {
     super(props);
     this.state = { goal: undefined };
   }
 
   componentDidMount() {
-    this.firebaseRef = database().ref('/goals/a53434534');
+    this.firebaseRef = database().ref(`/goals/${this.props.match.params.id}`);
     this.firebaseCallback = this.firebaseRef.on('value', snapshot => {
       if (!snapshot) return;
       const goal: db.Goal = snapshot.val();

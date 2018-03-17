@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as db from '../interfaces/db';
+import { Link } from 'react-router-dom';
 
 type S = {};
 type P = { goal: db.Goal };
@@ -12,6 +13,9 @@ export default class GoalItem extends React.Component<P, S> {
         <div>{this.goal.benefit}</div>
         <div>{this.goal.target}</div>
         <div>{this.goal.deadline}</div>
+        <div>
+          <Link to={`/goals/${this.goal.id}`}>Details</Link>
+        </div>
       </div>
     );
   }

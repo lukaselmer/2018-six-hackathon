@@ -21,7 +21,7 @@ class App extends React.Component {
         </header>
         <Switch>
           <Route exact={true} path="/" component={Goals} />
-          <Route path="/goals" component={Goal} />
+          <Route path="/goals/:id" component={Goal} />
           <Route path="/my-goals" component={SubscribedGoals} />
           {/* <Route path="/schedule" component={Schedule} /> */}
         </Switch>
