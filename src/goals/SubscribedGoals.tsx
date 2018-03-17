@@ -2,6 +2,7 @@ import * as React from 'react';
 import { database } from 'firebase';
 import * as db from '../interfaces/db';
 import GoalItem from './GoalItem';
+import Comments from './Comments';
 
 type S = { subscribedGoals: db.SubscribedGoal[]; goals: db.Goals };
 
@@ -52,6 +53,14 @@ export default class SubscribedGoals extends React.Component<{}, S> {
           <div>{subscribedGoal.startingAt}</div>
           <div>{subscribedGoal.startingBalance}</div>
           <div>{subscribedGoal.goalId}</div>
+          <div>
+            <Comments
+              comments={[
+                { name: 'Marion', comment: 'I achieved my dream :D I am so happy!' },
+                { name: 'Lukas', comment: 'Absolutely love it!'}
+              ]}
+            />
+          </div>
         </div>
       </div>
     );
