@@ -11,6 +11,7 @@
       "text" : "@daniela93 just booked the flight at TUI 🏆 🥇🥇🥇🛫✈️"
     } ],
     "goal" : {
+      "id": "77777777-F602-410B-A9C5-700B4FDEFCC",
       "actualTotalSaving" : 110208,
       "benefit" : "15% Off",
       "deadline" : "2018-12-14",
@@ -38,6 +39,7 @@
       "text" : "@daniela93 just booked the flight at TUI 🏆 🥇🥇🥇🛫✈️"
     } ],
     "goal" : {
+      "id": "77777777-F602-410B-A9C5-700B4FDEFCC",
       "actualTotalSaving" : 110208,
       "benefit" : "15% Off",
       "deadline" : "2018-12-14",
@@ -92,6 +94,7 @@
     "subscribedGoals" : [ {
       "actualBalance" : 4182,
       "goal" : {
+        "id": "77777777-F602-410B-A9C5-700B4FDEFCC",
         "actualTotalSaving" : 110208,
         "benefit" : "15% Off",
         "deadline" : "2018-12-14",

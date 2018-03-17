@@ -29,6 +29,7 @@ export interface SubscribedGoal {
 }
 
 export interface Goal {
+  id: string;
   actualTotalSaving: number;
   benefit: string;
   deadline: string;

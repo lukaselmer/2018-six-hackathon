@@ -1,22 +1,22 @@
 import * as React from 'react';
 import './App.css';
 import { database } from 'firebase';
-import { Item } from './interfaces/db';
+import { AvailableGoal } from './interfaces/db';
 
 const logo = require('./logo.svg');
 
-type P = { items: Item[] };
+type P = { availableGoals: AvailableGoal[] };
 
 class App extends React.Component<{}, P> {
   constructor(props: {}) {
     super(props);
-    this.state = { items: [] };
+    this.state = { availableGoals: [] };
     database()
-      .ref('/menu/items')
+      .ref('/availableGoals')
       .on('value', snapshot => {
         if (!snapshot) return;
-        const items: Item[] = snapshot.val();
-        this.setState({ items });
+        const availableGoals: AvailableGoal[] = snapshot.val();
+        this.setState({ availableGoals });
       });
   }
 
@@ -36,7 +36,7 @@ class App extends React.Component<{}, P> {
   }
 
   private listItems() {
-    return this.state.items.map(item => <li key={item.id}>{item.id}</li>);
+    return this.state.availableGoals.map(goal => <li key={goal.goal.name}>{goal.goal.name}</li>);
   }
 }
 
