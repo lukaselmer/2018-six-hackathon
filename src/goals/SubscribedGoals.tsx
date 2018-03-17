@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as db from '../interfaces/db';
 import GoalItem from './GoalItem';
-import Comments from './Comments';
 
 type P = { db: db.DBStructure };
 
@@ -21,14 +20,6 @@ export default class SubscribedGoals extends React.Component<P> {
           <div>{subscribedGoal.startingAt}</div>
           <div>{subscribedGoal.startingBalance}</div>
           <div>{subscribedGoal.goalId}</div>
-          <div>
-            <Comments
-              comments={[
-                { name: 'Marion', comment: 'I achieved my dream :D I am so happy!' },
-                { name: 'Lukas', comment: 'Absolutely love it!'}
-              ]}
-            />
-          </div>
         </div>
       </div>
     );
