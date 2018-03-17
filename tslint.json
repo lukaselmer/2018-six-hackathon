@@ -13,7 +13,7 @@
             true,
             "check-space"
         ],
-        "curly": true,
+        // "curly": [false, "as-needed"],
         "eofline": false,
         "forin": true,
         "indent": [ true, "spaces" ],
@@ -33,7 +33,7 @@
         "no-arg": true,
         "no-bitwise": true,
         "no-console": [
-            true,
+            false,
             "log",
             "error",
             "debug",
