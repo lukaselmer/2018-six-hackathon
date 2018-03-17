@@ -1,21 +1,37 @@
 import * as React from 'react';
 import * as db from '../interfaces/db';
-import { Link } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router-dom';
+import { Card, CardMedia, Typography, CardContent } from 'material-ui';
+import { withRouter } from 'react-router';
+import Button from './Button';
+import './GoalItem.css';
 
 type S = {};
 type P = { goal: db.Goal };
 
-export default class GoalItem extends React.Component<P, S> {
+class GoalItem extends React.Component<RouteComponentProps<P> & P, S> {
   render() {
     return (
-      <div>
-        <h3>{this.goal.name}</h3>
-        <div>{this.goal.benefit}</div>
-        <div>{this.goal.target}</div>
-        <div>{this.goal.deadline}</div>
-        <div>
-          <Link to={`/goals/${this.goal.id}`}>Details</Link>
-        </div>
+      <div className="GoalItem">
+        <Card className="GoalItemCard">
+          <CardMedia image={this.goal.image} />
+          <CardContent>
+            <Typography gutterBottom={true} variant="headline" component="h2">
+              {this.goal.name}
+            </Typography>
+            <Typography component="div">
+              <div style={{ textAlign: 'center' }}>
+                <img src={this.goal.image} style={{ width: '30%', minWidth: '150px' }} />
+              </div>
+              <div>{this.goal.benefit}</div>
+              <div>{this.goal.target} CHF</div>
+              <div>Valid until {this.goal.deadline}</div>
+              <div style={{ textAlign: 'center', margin: '20px 10% 0 10%' }}>
+                <Button onClick={() => this.props.history.push(`/goals/${this.goal.id}`)} text="START DREAMING" />
+              </div>
+            </Typography>
+          </CardContent>
+        </Card>
       </div>
     );
   }
@@ -24,3 +40,5 @@ export default class GoalItem extends React.Component<P, S> {
     return this.props.goal;
   }
 }
+
+export default withRouter(GoalItem);

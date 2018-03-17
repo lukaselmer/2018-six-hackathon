@@ -1,0 +1,15 @@
+@media (min-width: 1000px) {
+  .GoalItem {
+    width: 50%;
+  }
+}
+
+@media (max-width: 999px) {
+  .GoalItem {
+    width: 100%;
+  }
+}
+
+.GoalItemCard {
+  margin: 20px;
+}

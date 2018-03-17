@@ -10,8 +10,12 @@ export default class GoalComponent extends React.Component<P> {
   firebaseCallback: (a: firebase.database.DataSnapshot | null, b?: string) => string;
 
   render() {
+    return <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>{this.renderItem()}</div>;
+  }
+
+  private renderItem() {
     return Object.keys(this.props.goals).map(key => (
-      <GoalItem goal={this.props.goals[key]} key={key}>
+      <GoalItem key={key} goal={this.props.goals[key]}>
         {this.props.goals[key].name}
       </GoalItem>
     ));
