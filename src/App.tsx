@@ -9,7 +9,7 @@ import { DBStructure } from './interfaces/db';
 import { Toolbar, AppBar, IconButton, Typography } from 'material-ui';
 import { AccountCircle, Menu as MenuIcon } from 'material-ui-icons';
 
-type S = { db: DBStructure };
+type S = { db: DBStructure; showMenu?: boolean };
 
 export default class App extends React.Component<{}, S> {
   firebaseRef: database.Reference;
@@ -35,7 +35,7 @@ export default class App extends React.Component<{}, S> {
       <div>
         <AppBar position="static">
           <Toolbar>
-            <IconButton color="inherit" aria-label="Menu">
+            <IconButton color="inherit" aria-label="Menu" onClick={() => this.setState({ showMenu: !this.state.showMenu })}>
               <MenuIcon />
             </IconButton>
             <Typography style={{ flexGrow: 1 }} variant="title" color="inherit">
@@ -73,16 +73,56 @@ export default class App extends React.Component<{}, S> {
             </div>
           </Toolbar>
         </AppBar>
-        <header>
-          <ul>
-            <li>
-              <Link to={`/`}>Challenges</Link>
-            </li>
-            <li>
-              <Link to={`/my-goals`}>My Goals</Link>
-            </li>
-          </ul>
-        </header>
+        {this.state.showMenu && (
+          <header onClick={() => this.setState({ showMenu: !this.state.showMenu })}>
+            <div
+              style={{
+                position: 'absolute',
+                marginLeft: '25px'
+              }}
+            >
+              <div
+                style={{
+                  border: '1px #ccc solid',
+                  borderBottom: 'none',
+                  background: 'white'
+                }}
+              >
+                <Link
+                  style={{
+                    padding: '12px 15px',
+                    display: 'block',
+                    color: 'inherit',
+                    textDecoration: 'none'
+                  }}
+                  to={`/`}
+                >
+                  Dreams
+                </Link>
+              </div>
+              <div
+                style={{
+                  border: '1px #ccc solid',
+                  borderBottomLeftRadius: '4px',
+                  borderBottomRightRadius: '4px',
+                  background: 'white'
+                }}
+              >
+                <Link
+                  style={{
+                    display: 'block',
+                    color: 'inherit',
+                    textDecoration: 'none',
+                    padding: '12px 15px'
+                  }}
+                  to={`/my-goals`}
+                >
+                  My Dreams
+                </Link>
+              </div>
+            </div>
+          </header>
+        )}
         <Switch>
           <Route exact={true} path="/" render={() => <Goals goals={this.state.db.goals} />} />
           <Route path="/goals/:id" render={props => this.renderGoal(props.match.params.id)} />
@@ -91,23 +131,6 @@ export default class App extends React.Component<{}, S> {
       </div>
     );
   }
-  // <div className="App">
-  //   <header>
-  //     <ul>
-  //       <li>
-  //         <Link to={`/`}>Challenges</Link>
-  //       </li>
-  //       <li>
-  //         <Link to={`/my-goals`}>My Goals</Link>
-  //       </li>
-  //     </ul>
-  //   </header>
-  //   <Switch>
-  //     <Route exact={true} path="/" render={() => <Goals goals={this.state.db.goals} />} />
-  //     <Route path="/goals/:id" render={props => this.renderGoal(props.match.params.id)} />
-  //     <Route path="/my-goals" render={() => this.renderSubscribedGoals()} />
-  //   </Switch>
-  // </div>
 
   private renderGoal(goalId: string) {
     return <Goal id={goalId} db={this.state.db as DBStructure} />;
