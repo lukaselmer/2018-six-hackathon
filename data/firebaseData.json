@@ -3,70 +3,104 @@
     "goals": {
       "a53434534": {
         "id": "a53434534",
-        "actualTotalSaving": 110208,
-        "benefit": "15% Off",
+        "actualTotalSaving": 27440,
+        "benefit": "10%",
         "deadline": "2018-12-14",
-        "description": "I want to spend less money to save a trip to Thailand.",
-        "numberOfFollowers": 287,
-        "image": "TODO",
-        "name": "Christmas holidays",
+        "description": "I want to spend less money to save it for a great new Vespa.",
+        "numberOfFollowers": 28,
+        "image": "https://www.lunchdealer.at/tests/dreams/img/vespa.png",
+        "name": "Great New Vespa",
         "peers": "11A95B48-7537-4A62-B221-6CE9F74ECACC",
-        "progress": 0.32,
-        "rewardImage": "TODO",
+        "progress": 0.28,
+        "rewardImage": "https://www.lunchdealer.at/tests/dreams/img/100daysui_100icon.png",
         "rewardTextSuccess": "You have reached your goal! Have a nice vacation with TUI! 😎😎😎",
-        "target": 1200,
-        "targetTotalSaving": 344400,
-        "vendor": "TUI",
+        "target": 3500,
+        "targetTotalSaving": 98000,
+        "vendor": "Vespa",
         "comments": [
           {
-            "image": "TODO",
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic2.png",
             "text": "@claudia_c Have you reached your goal yet?"
           },
           {
-            "image": "TODO",
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic1.png",
             "text": "New user joined: @patrick has accepted the challenge! 🤪🤪"
           },
           {
-            "image": "TODO",
-            "text": "@daniela93 just booked the flight at TUI 🏆 🥇🥇🥇🛫✈️"
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic3.png",
+            "text": "@daniel68 bought a brand new Vespa and saved 10%! 🏆 🥇🥇🥇 "
           }
         ]
       },
       "b77": {
         "id": "b77",
-        "actualTotalSaving": 110208,
+        "actualTotalSaving": 14450,
         "benefit": "We will double your donation",
         "deadline": "2018-07-14",
-        "description": "I want to spend less money to save a trip to Thailand.",
+        "description": "I want to save money for donation for children in Africa.",
         "numberOfFollowers": 287,
-        "image": "TODO",
+        "image": "https://www.lunchdealer.at/tests/dreams/img/person-black-and-white-people-girl-photography-boy-1373031-pxhere.com.jpg",
         "name": "Donations",
-        "peers": "TODO 11A95B48-7537-4A62-B221-6CE9F74ECACC",
-        "progress": 0.32,
-        "rewardImage": "TODO",
+        "peers": "12A95B48-7537-4A62-B221-6CE9F74ECACC",
+        "progress": 0.35,
+        "rewardImage": "https://www.lunchdealer.at/tests/dreams/img/100daysui_100icon.png",
         "rewardTextSuccess": "You have reached your goal! Have a nice vacation with TUI! 😎😎😎",
         "target": 200,
-        "targetTotalSaving": 344400,
-        "vendor": "TUI",
-        "comments": []
+        "targetTotalSaving": 57400,
+        "vendor": "Caritas",
+        "comments": [
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic2.png",
+            "text": "@claudia_c Have you reached your goal yet?"
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic1.png",
+            "text": "New user joined: @patrick has accepted the challenge! 🤪🤪"
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic3.png",
+            "text": "@daniel68 bought a brand new Vespa and saved 10%! 🏆 🥇🥇🥇 "
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic3.png",
+            "text": "@daniel68 bought a brand new Vespa and saved 10%! 🏆 🥇🥇🥇 "
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic3.png",
+            "text": "@daniel68 bought a brand new Vespa and saved 10%! 🏆 🥇🥇🥇 "
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic3.png",
+            "text": "@daniel68 bought a brand new Vespa and saved 10%! 🏆 🥇🥇🥇 "
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic3.png",
+            "text": "@daniel68 bought a brand new Vespa and saved 10%! 🏆 🥇🥇🥇 "
+          }
+        ]
       },
       "c77": {
         "id": "c77",
         "actualTotalSaving": 110208,
         "benefit": "Free service for 3 years",
         "deadline": "2018-07-14",
-        "description": "I want to spend less money to save a trip to Thailand.",
-        "numberOfFollowers": 287,
+        "description": "Buy a brand new Seat and get a free service for 3 years.",
+        "numberOfFollowers": 22,
         "image": "TODO",
-        "name": "Vespa",
-        "peers": "TODO 11A95B48-7537-4A62-B221-6CE9F74ECACC",
+        "name": "Seat Ibiza",
+        "peers": "13A95B48-7537-4A62-B221-6CE9F74ECACC",
         "progress": 0.32,
         "rewardImage": "TODO",
         "rewardTextSuccess": "You have reached your goal! Have a nice vacation with TUI! 😎😎😎",
         "target": 3500,
         "targetTotalSaving": 344400,
-        "vendor": "TUI",
-        "comments": []
+        "vendor": "Seat",
+        "comments": [
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic1.png",
+            "text": "New user joined: @patrick has accepted the challenge! 🤪🤪"
+          }
+        ]
       }
     },
     "cashFlowModel": [
@@ -115,6 +149,13 @@
             "goalId": "a53434534",
             "actualBalance": 4182,
             "progress": 0.2,
+            "startingAt": "2018-01-13",
+            "startingBalance": 3982
+          },
+          {
+            "goalId": "b77",
+            "actualBalance": 4182,
+            "progress": 0.1,
             "startingAt": "2018-01-13",
             "startingBalance": 3982
           }
