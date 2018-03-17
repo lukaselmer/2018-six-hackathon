@@ -1,25 +1,24 @@
 import * as React from 'react';
 import { database } from 'firebase';
 import * as db from '../interfaces/db';
-import GoalItem from './GoalItem';
 
-type S = { goals: db.Goal[] };
+type S = { goal: db.Goal | undefined };
 
-export default class GoalComponent extends React.Component<{}, S> {
+export default class Goal extends React.Component<{}, S> {
   firebaseRef: database.Reference;
   firebaseCallback: (a: firebase.database.DataSnapshot | null, b?: string) => string;
 
   constructor(props: {}) {
     super(props);
-    this.state = { goals: [] };
+    this.state = { goal: undefined };
   }
 
   componentDidMount() {
-    this.firebaseRef = database().ref('/goals');
+    this.firebaseRef = database().ref('/goals/a53434534');
     this.firebaseCallback = this.firebaseRef.on('value', snapshot => {
       if (!snapshot) return;
-      const goals: db.Goal[] = snapshot.val();
-      this.setState({ goals });
+      const goal: db.Goal = snapshot.val();
+      this.setState({ goal });
     });
   }
 
@@ -28,10 +27,10 @@ export default class GoalComponent extends React.Component<{}, S> {
   }
 
   render() {
-    return Object.keys(this.state.goals).map(key => (
-      <GoalItem goal={this.state.goals[key]} key={key}>
-        {this.state.goals[key].name}
-      </GoalItem>
-    ));
+    return <div>{this.goal && this.goal.name}</div>;
+  }
+
+  private get goal() {
+    return this.state.goal;
   }
 }

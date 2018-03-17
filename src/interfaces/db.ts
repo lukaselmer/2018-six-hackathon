@@ -3,7 +3,7 @@ export interface DBStructure {
   customers: Customer[];
 }
 
-type Goals = { [key: string]: Goal };
+export type Goals = { [key: string]: Goal };
 
 export interface Goal {
   id: string;
