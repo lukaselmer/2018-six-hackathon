@@ -3,7 +3,7 @@ import './App.css';
 import SubscribedGoals from './goals/SubscribedGoals';
 import Goals from './goals/Goals';
 import Goal from './goals/Goal';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 import { database } from 'firebase';
 import { DBStructure } from './interfaces/db';
 import { Toolbar, AppBar, IconButton, Typography } from 'material-ui';
@@ -73,6 +73,16 @@ export default class App extends React.Component<{}, S> {
             </div>
           </Toolbar>
         </AppBar>
+        <header>
+          <ul>
+            <li>
+              <Link to={`/`}>Challenges</Link>
+            </li>
+            <li>
+              <Link to={`/my-goals`}>My Goals</Link>
+            </li>
+          </ul>
+        </header>
         <Switch>
           <Route exact={true} path="/" render={() => <Goals goals={this.state.db.goals} />} />
           <Route path="/goals/:id" render={props => this.renderGoal(props.match.params.id)} />
@@ -81,7 +91,7 @@ export default class App extends React.Component<{}, S> {
       </div>
     );
   }
-  //   <div className="App">
+  // <div className="App">
   //   <header>
   //     <ul>
   //       <li>
