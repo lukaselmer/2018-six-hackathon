@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as db from '../interfaces/db';
-import GoalItem from './GoalItem';
+import SubscribedGoalItem from './SubscribedGoalItem';
+import Card from 'material-ui/Card';
 
 type P = { db: db.DBStructure };
 
@@ -11,15 +12,16 @@ export default class SubscribedGoals extends React.Component<P> {
 
   private renderGoal(subscribedGoal: db.SubscribedGoal) {
     return (
-      <div key={subscribedGoal.goalId}>
-        <GoalItem goal={this.goal(subscribedGoal.goalId)} />
-        <h4>Additional Info</h4>
-        <div>
-          <div>{subscribedGoal.actualBalance}</div>
-          <div>{subscribedGoal.progress}</div>
-          <div>{subscribedGoal.startingAt}</div>
-          <div>{subscribedGoal.startingBalance}</div>
-          <div>{subscribedGoal.goalId}</div>
+      <div>
+        <div key={subscribedGoal.goalId}>
+          <Card style={{ width: '293px', height: '260px', backgroundColor: '#ffffff' }}>
+            <SubscribedGoalItem goal={this.goal(subscribedGoal.goalId)} />
+          </Card>
+        </div>
+        <div key={subscribedGoal.goalId}>
+          <Card style={{ width: '293px', height: '260px', backgroundColor: '#ffffff' }}>
+            <SubscribedGoalItem goal={this.goal(subscribedGoal.goalId)} />
+          </Card>
         </div>
       </div>
     );
