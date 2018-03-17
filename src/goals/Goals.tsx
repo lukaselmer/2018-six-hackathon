@@ -3,34 +3,16 @@ import { database } from 'firebase';
 import * as db from '../interfaces/db';
 import GoalItem from './GoalItem';
 
-type S = { goals: db.Goal[] };
+type P = { goals: db.Goals };
 
-export default class GoalComponent extends React.Component<{}, S> {
+export default class GoalComponent extends React.Component<P> {
   firebaseRef: database.Reference;
   firebaseCallback: (a: firebase.database.DataSnapshot | null, b?: string) => string;
 
-  constructor(props: {}) {
-    super(props);
-    this.state = { goals: [] };
-  }
-
-  componentDidMount() {
-    this.firebaseRef = database().ref('/goals');
-    this.firebaseCallback = this.firebaseRef.on('value', snapshot => {
-      if (!snapshot) return;
-      const goals: db.Goal[] = snapshot.val();
-      this.setState({ goals });
-    });
-  }
-
-  componentWillUnmount() {
-    this.firebaseRef.off('value', this.firebaseCallback);
-  }
-
   render() {
-    return Object.keys(this.state.goals).map(key => (
-      <GoalItem goal={this.state.goals[key]} key={key}>
-        {this.state.goals[key].name}
+    return Object.keys(this.props.goals).map(key => (
+      <GoalItem goal={this.props.goals[key]} key={key}>
+        {this.props.goals[key].name}
       </GoalItem>
     ));
   }
