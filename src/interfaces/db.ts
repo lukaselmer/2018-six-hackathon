@@ -1,32 +1,9 @@
 export interface DBStructure {
-  availableGoals: AvailableGoal[];
+  goals: Goals;
   customers: Customer[];
 }
 
-export interface AvailableGoal {
-  comments: Comment[];
-  goal: Goal;
-}
-
-export interface Customer {
-  badges: string[];
-  id: string;
-  image: string;
-  mail: string;
-  mobile: string;
-  name: string;
-  peers: string;
-  subscribedGoals: SubscribedGoal[];
-  username: string;
-}
-
-export interface SubscribedGoal {
-  actualBalance: number;
-  goal: Goal;
-  progress: number;
-  startingAt: string;
-  startingBalance: number;
-}
+type Goals = { [key: string]: Goal };
 
 export interface Goal {
   id: string;
@@ -44,9 +21,31 @@ export interface Goal {
   target: number;
   targetTotalSaving: number;
   vendor: string;
+  comments: Comment[];
 }
 
 export interface Comment {
   image: string;
   text: string;
+}
+
+export interface SubscribedGoal {
+  goalId: string;
+  actualBalance: number;
+  progress: number;
+  startingAt: string;
+  startingBalance: number;
+}
+
+export interface Customer {
+  badges: string[];
+  events: Event[];
+  id: string;
+  image: string;
+  mail: string;
+  mobile: string;
+  name: string;
+  peers: string;
+  subscribedGoals: SubscribedGoal[];
+  username: string;
 }

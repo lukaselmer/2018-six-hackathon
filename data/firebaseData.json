@@ -1,138 +1,149 @@
 {
-  "availableGoals" : [ {
-    "comments" : [ {
-      "image" : "TODO",
-      "text" : "@claudia_c Have you reached your goal yet?"
-    }, {
-      "image" : "TODO",
-      "text" : "New user joined: @patrick has accepted the challenge! 🤪🤪"
-    }, {
-      "image" : "TODO",
-      "text" : "@daniela93 just booked the flight at TUI 🏆 🥇🥇🥇🛫✈️"
-    } ],
-    "goal" : {
-      "id": "77777777-F602-410B-A9C5-700B4FDEFCC",
-      "actualTotalSaving" : 110208,
-      "benefit" : "15% Off",
-      "deadline" : "2018-12-14",
-      "description" : "I want to spend less money to save a trip to Thailand.",
-      "numberOfFollowers" : 287,
-      "image" : "TODO",
-      "name" : "Christmas holidays",
-      "peers" : "11A95B48-7537-4A62-B221-6CE9F74ECACC",
-      "progress" : 0.32,
-      "rewardImage" : "TODO",
-      "rewardTextSuccess" : "You have reached your goal! Have a nice vacation with TUI! 😎😎😎",
-      "target" : 1200,
-      "targetTotalSaving" : 344400,
-      "vendor" : "TUI"
-    }
-  }, {
-    "comments" : [ {
-      "image" : "TODO",
-      "text" : "@claudia_c Have you reached your goal yet?"
-    }, {
-      "image" : "TODO",
-      "text" : "New user joined: @patrick has accepted the challenge! 🤪🤪"
-    }, {
-      "image" : "TODO",
-      "text" : "@daniela93 just booked the flight at TUI 🏆 🥇🥇🥇🛫✈️"
-    } ],
-    "goal" : {
-      "id": "77777777-F602-410B-A9C5-700B4FDEFCC",
-      "actualTotalSaving" : 110208,
-      "benefit" : "15% Off",
-      "deadline" : "2018-12-14",
-      "description" : "I want to spend less money to save a trip to Thailand.",
-      "numberOfFollowers" : 287,
-      "image" : "TODO",
-      "name" : "TODO",
-      "peers" : "11A95B48-7537-4A62-B221-6CE9F74ECACC",
-      "progress" : 0.32,
-      "rewardImage" : "TODO",
-      "rewardTextSuccess" : "You have reached your goal! Have a nice vacation with TUI! 😎😎😎",
-      "target" : 1200,
-      "targetTotalSaving" : 344400,
-      "vendor" : "TUI"
-    }
-  } ],
-  "cashFlowModel" : [ {
-    "forecast" : {
-      "data" : [ [ 6.0858, 2.264, 2.688, 0.0312 ], [ -0.9535, 3.2983, -0.2891, 0.7809 ], [ -0.1944, 1.8526, -0.1049, 0.9194 ] ],
-      "header" : [ "Estimate", "Std. Error", "t value", "Pr(>|t|)" ],
-      "labels" : [ "(Intercept)", "shoes", "coffee" ]
+  "goals": {
+    "a53434534": {
+      "id": "a53434534",
+      "actualTotalSaving": 110208,
+      "benefit": "15% Off",
+      "deadline": "2018-12-14",
+      "description": "I want to spend less money to save a trip to Thailand.",
+      "numberOfFollowers": 287,
+      "image": "TODO",
+      "name": "Christmas holidays",
+      "peers": "11A95B48-7537-4A62-B221-6CE9F74ECACC",
+      "progress": 0.32,
+      "rewardImage": "TODO",
+      "rewardTextSuccess": "You have reached your goal! Have a nice vacation with TUI! 😎😎😎",
+      "target": 1200,
+      "targetTotalSaving": 344400,
+      "vendor": "TUI",
+      "comments": [
+        {
+          "image": "TODO",
+          "text": "@claudia_c Have you reached your goal yet?"
+        },
+        {
+          "image": "TODO",
+          "text": "New user joined: @patrick has accepted the challenge! 🤪🤪"
+        },
+        {
+          "image": "TODO",
+          "text": "@daniela93 just booked the flight at TUI 🏆 🥇🥇🥇🛫✈️"
+        }
+      ]
     },
-    "user" : "6F7DEF8D-F602-410B-A9C5-700B4FDEFCC"
-  } ],
-  "customers" : [ {
-    "badges" : [ "TODO", "TODO", "TODO" ],
-    "bankCredentials" : {
-      "account" : "CH40XXXXX",
-      "authToken" : "<token>",
-      "endpoint" : "",
-      "login" : "<add details>"
+    "b77": {
+      "id": "b77",
+      "actualTotalSaving": 110208,
+      "benefit": "We will double your donation",
+      "deadline": "2018-07-14",
+      "description": "I want to spend less money to save a trip to Thailand.",
+      "numberOfFollowers": 287,
+      "image": "TODO",
+      "name": "Donations",
+      "peers": "TODO 11A95B48-7537-4A62-B221-6CE9F74ECACC",
+      "progress": 0.32,
+      "rewardImage": "TODO",
+      "rewardTextSuccess": "You have reached your goal! Have a nice vacation with TUI! 😎😎😎",
+      "target": 200,
+      "targetTotalSaving": 344400,
+      "vendor": "TUI",
+      "comments": []
     },
-    "events" : [ {
-      "actionLink" : "http://www.freecoffee.ch",
-      "actionText" : "Get a free coffee at Starbuchs",
-      "bodytext" : "That's the very best ad",
-      "headertext" : "Oh no! Too much coffee!",
-      "type" : "ad"
-    }, {
-      "actionLink" : "#",
-      "actionText" : "Thank you!",
-      "bodytext" : "You can save money for coffee if you get a boyfriend!",
-      "headertext" : "Oh no! Too much coffee!",
-      "type" : "advise"
-    } ],
-    "id" : "6F7DEF8D-F602-410B-A9C5-700B4FDEFCC",
-    "image" : "http://maxpixel.freegreatpicture.com/static/photo/2x/Face-The-Disappointment-Blonde-Sadness-Eyes-Woman-2066673.jpg",
-    "mail" : "claudia@gmail.com",
-    "mobile" : "+41 722 233 23 12",
-    "name" : "Claudia Coiffeuse",
-    "peers" : "11A95B48-7537-4A62-B221-6CE9F74ECACC",
-    "subscribedGoals" : [ {
-      "actualBalance" : 4182,
-      "goal" : {
-        "id": "77777777-F602-410B-A9C5-700B4FDEFCC",
-        "actualTotalSaving" : 110208,
-        "benefit" : "15% Off",
-        "deadline" : "2018-12-14",
-        "description" : "I want to spend less money to save a trip to Thailand.",
-        "numberOfFollowers" : 287,
-        "image" : "TODO",
-        "name" : "Christmas holidays",
-        "peers" : "11A95B48-7537-4A62-B221-6CE9F74ECACC",
-        "progress" : 0.32,
-        "rewardImage" : "TODO",
-        "rewardTextSuccess" : "You have reached your goal! Have a nice vacation with TUI! 😎😎😎",
-        "target" : 1200,
-        "targetTotalSaving" : 344400,
-        "vendor" : "TUI"
+    "c77": {
+      "id": "c77",
+      "actualTotalSaving": 110208,
+      "benefit": "Free service for 3 years",
+      "deadline": "2018-07-14",
+      "description": "I want to spend less money to save a trip to Thailand.",
+      "numberOfFollowers": 287,
+      "image": "TODO",
+      "name": "Vespa",
+      "peers": "TODO 11A95B48-7537-4A62-B221-6CE9F74ECACC",
+      "progress": 0.32,
+      "rewardImage": "TODO",
+      "rewardTextSuccess": "You have reached your goal! Have a nice vacation with TUI! 😎😎😎",
+      "target": 3500,
+      "targetTotalSaving": 344400,
+      "vendor": "TUI",
+      "comments": []
+    }
+  },
+  "cashFlowModel": [
+    {
+      "forecast": {
+        "data": [[6.0858, 2.264, 2.688, 0.0312], [-0.9535, 3.2983, -0.2891, 0.7809], [-0.1944, 1.8526, -0.1049, 0.9194]],
+        "header": ["Estimate", "Std. Error", "t value", "Pr(>|t|)"],
+        "labels": ["(Intercept)", "shoes", "coffee"]
       },
-      "progress" : 0.2,
-      "startingAt" : "2018-01-13",
-      "startingBalance" : 3982
-    } ],
-    "username" : "claudia_c"
-  } ],
-  "peers" : [ {
-    "cashFlowModel" : {
-      "data" : [ [ 4.5468, 3.1565, 1.4405, 0.1929 ], [ 1.684, 4.6522, 0.362, 0.7281 ], [ -0.3767, 0.7364, -0.5116, 0.6247 ] ],
-      "header" : [ "Estimate", "Std. Error", "t value", "Pr(>|t|)" ],
-      "labels" : [ "(Intercept)", "shoes", "coffee" ]
-    },
-    "guid" : "11A95B48-7537-4A62-B221-6CE9F74ECACC",
-    "name" : "Female >25 Smoker",
-    "properties" : [ {
-      "id" : "Income",
-      "label" : "> 4000 CHF"
-    }, {
-      "id" : "Location",
-      "label" : "Zurich"
-    }, {
-      "id" : "Top 3 Spending",
-      "label" : "Zoom Out"
-    } ]
-  } ]
+      "user": "6F7DEF8D-F602-410B-A9C5-700B4FDEFCC"
+    }
+  ],
+  "customers": [
+    {
+      "badges": ["TODO", "TODO", "TODO"],
+      "bankCredentials": {
+        "account": "CH40XXXXX",
+        "authToken": "<token>",
+        "endpoint": "",
+        "login": "<add details>"
+      },
+      "events": [
+        {
+          "actionLink": "http://www.freecoffee.ch",
+          "actionText": "Get a free coffee at Starbuchs",
+          "bodytext": "That's the very best ad",
+          "headertext": "Oh no! Too much coffee!",
+          "type": "ad"
+        },
+        {
+          "actionLink": "#",
+          "actionText": "Thank you!",
+          "bodytext": "You can save money for coffee if you get a boyfriend!",
+          "headertext": "Oh no! Too much coffee!",
+          "type": "advise"
+        }
+      ],
+      "id": "cus353453",
+      "image": "http://maxpixel.freegreatpicture.com/static/photo/2x/Face-The-Disappointment-Blonde-Sadness-Eyes-Woman-2066673.jpg",
+      "mail": "claudia@gmail.com",
+      "mobile": "+41 722 233 23 12",
+      "name": "Claudia Coiffeuse",
+      "peers": "11A95B48-7537-4A62-B221-6CE9F74ECACC",
+      "subscribedGoals": [
+        {
+          "goalId": "a53434534",
+          "actualBalance": 4182,
+          "progress": 0.2,
+          "startingAt": "2018-01-13",
+          "startingBalance": 3982
+        }
+      ],
+      "username": "claudia_c"
+    }
+  ],
+  "peers": [
+    {
+      "cashFlowModel": {
+        "data": [[4.5468, 3.1565, 1.4405, 0.1929], [1.684, 4.6522, 0.362, 0.7281], [-0.3767, 0.7364, -0.5116, 0.6247]],
+        "header": ["Estimate", "Std. Error", "t value", "Pr(>|t|)"],
+        "labels": ["(Intercept)", "shoes", "coffee"]
+      },
+      "id": "11A95B48-7537-4A62-B221-6CE9F74ECACC",
+      "name": "Female >25 Smoker",
+      "properties": [
+        {
+          "id": "Income",
+          "label": "> 4000 CHF"
+        },
+        {
+          "id": "Location",
+          "label": "Zurich"
+        },
+        {
+          "id": "Top 3 Spending",
+          "label": "Zoom Out"
+        }
+      ]
+    }
+  ]
 }
