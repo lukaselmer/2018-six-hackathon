@@ -195,6 +195,7 @@
           {
             "goalId": "a53434534",
             "actualBalance": 4182,
+            "remainingDays": 180,
             "progress": 0.2,
             "startingAt": "2018-01-13",
             "startingBalance": 3982
@@ -202,6 +203,7 @@
           {
             "goalId": "b77",
             "actualBalance": 4182,
+            "remainingDays": 180,
             "progress": 0.1,
             "startingAt": "2018-01-13",
             "startingBalance": 3982

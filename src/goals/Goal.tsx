@@ -10,9 +10,11 @@ export default class Goal extends React.Component<P> {
   render() {
     return (
       <div>
-        <div>
-          <Progress goal={this.goal} />
-        </div>
+        {this.subscribedGoal && (
+          <div>
+            <Progress goal={this.goal} subscribedGoal={this.subscribedGoal} />
+          </div>
+        )}
         <div>
           <Coupons coupons={this.goal.coupons} />
         </div>
@@ -24,7 +26,10 @@ export default class Goal extends React.Component<P> {
   }
 
   private get goal() {
-    console.log(this.props.db.goals[this.props.id]);
     return this.props.db.goals[this.props.id];
+  }
+
+  private get subscribedGoal() {
+    return this.props.db.customers[0].subscribedGoals.find(el => el.goalId === this.goal.id);
   }
 }

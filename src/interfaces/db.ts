@@ -44,6 +44,7 @@ export interface SubscribedGoal {
   progress: number;
   startingAt: string;
   startingBalance: number;
+  remainingDays: number;
 }
 
 export interface Customer {
