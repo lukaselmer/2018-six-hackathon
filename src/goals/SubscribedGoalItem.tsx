@@ -14,7 +14,7 @@ class SubscribedGoalItem extends React.Component<RouteComponentProps<P> & P, S> 
           <img style={{ width: '50%', marginTop: '10px', height: 'auto', objectFit: 'contain' }} src={this.goal.image} />
         </div>
         <div style={{ textAlign: 'center', color: '#e91e63', paddingTop: '20px', paddingBottom: '20px', fontSize: '40px' }}>
-          {this.goal.benefit}
+          {Math.floor(this.goal.progress * 100)}%
         </div>
       </div>
     );
