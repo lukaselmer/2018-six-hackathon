@@ -3,6 +3,7 @@ import './App.css';
 import SubscribedGoals from './goals/SubscribedGoals';
 import Goals from './goals/Goals';
 import Goal from './goals/Goal';
+import Trophy from './goals/Trophy';
 import { Route, Switch, Link } from 'react-router-dom';
 import { database } from 'firebase';
 import { DBStructure } from './interfaces/db';
@@ -78,48 +79,14 @@ export default class App extends React.Component<{}, S> {
         </AppBar>
         {this.state.showMenu && (
           <header onClick={() => this.setState({ showMenu: !this.state.showMenu })}>
-            <div
-              style={{
-                position: 'absolute',
-                marginLeft: '25px'
-              }}
-            >
-              <div
-                style={{
-                  border: '1px #ccc solid',
-                  borderBottom: 'none',
-                  background: 'white'
-                }}
-              >
-                <Link
-                  style={{
-                    padding: '12px 15px',
-                    display: 'block',
-                    color: 'inherit',
-                    textDecoration: 'none'
-                  }}
-                  to={`/`}
-                >
+            <div style={{ position: 'absolute', marginLeft: '25px' }}>
+              <div style={{ border: '1px #ccc solid', borderBottom: 'none', background: 'white' }}>
+                <Link style={{ padding: '12px 15px', display: 'block', color: 'inherit', textDecoration: 'none' }} to={`/`}>
                   Dreams
                 </Link>
               </div>
-              <div
-                style={{
-                  border: '1px #ccc solid',
-                  borderBottomLeftRadius: '4px',
-                  borderBottomRightRadius: '4px',
-                  background: 'white'
-                }}
-              >
-                <Link
-                  style={{
-                    display: 'block',
-                    color: 'inherit',
-                    textDecoration: 'none',
-                    padding: '12px 15px'
-                  }}
-                  to={`/my-goals`}
-                >
+              <div style={{ border: '1px #ccc solid', borderBottomLeftRadius: '4px', borderBottomRightRadius: '4px', background: 'white' }}>
+                <Link style={{ display: 'block', color: 'inherit', textDecoration: 'none', padding: '12px 15px' }} to={`/my-goals`}>
                   My Dreams
                 </Link>
               </div>
@@ -132,6 +99,7 @@ export default class App extends React.Component<{}, S> {
               <Route exact={true} path="/" render={() => <Goals goals={this.state.db.goals} />} />
               <Route path="/goals/:id" render={props => this.renderGoal(props.match.params.id)} />
               <Route path="/my-goals" render={() => this.renderSubscribedGoals()} />
+              <Route path="/trophy/:id" render={props => this.renderTrophy(props.match.params.id)} />
             </Switch>
           </div>
         </div>
@@ -145,5 +113,9 @@ export default class App extends React.Component<{}, S> {
 
   private renderSubscribedGoals() {
     return <SubscribedGoals db={this.state.db as DBStructure} />;
+  }
+
+  private renderTrophy(goalId: string) {
+    return <Trophy id={goalId} db={this.state.db as DBStructure} />;
   }
 }
