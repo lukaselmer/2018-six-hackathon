@@ -33,7 +33,7 @@ class SubscribedGoals extends React.Component<RouteComponentProps<P> & P> {
       <div onClick={() => this.props.history.push(`/`)} style={{ width: '50%', cursor: 'pointer' }}>
         <Card style={{ margin: '20px' }}>
           <div style={{ textAlign: 'center' }}>
-            <img style={{ width: '50%', paddingTop: '40px', paddingBottom: '40px', height: 'auto', objectFit: 'contain' }} src={plus} />
+            <img style={{ width: '45%', paddingTop: '30px', height: 'auto', objectFit: 'contain' }} src={plus} />
           </div>
           <div style={{ textAlign: 'center', color: '#e91e63', paddingTop: '20px', paddingBottom: '20px', fontSize: '40px' }}>
             Add new Dream
