@@ -1,0 +1,267 @@
+{
+  "app": {
+    "name": "Dreams",
+    "goals": {
+      "a53434534": {
+        "id": "a53434534",
+        "actualTotalSaving": 27440,
+        "benefit": "10%",
+        "deadline": "2018-12-14",
+        "description": "I want to spend less money to save it for a great new Vespa.",
+        "numberOfFollowers": 28,
+        "image": "https://www.lunchdealer.at/tests/dreams/img/vespa.png",
+        "name": "Great New Vespa",
+        "peers": "11A95B48-7537-4A62-B221-6CE9F74ECACC",
+        "progress": 0.28,
+        "rewardImage": "https://www.lunchdealer.at/tests/dreams/img/100daysui_100icon.png",
+        "rewardTextSuccess": "You have reached your goal! Have a nice vacation with TUI! 😎😎😎",
+        "target": 3500,
+        "targetTotalSaving": 98000,
+        "vendor": "Vespa",
+        "coupons": {
+          "c01": {
+            "text": "Migros has a 2 for 1 coffee offer for you",
+            "label": "Get a 2:1 Coffee",
+            "link": "http://www.migros.ch"
+          },
+          "c02": {
+            "text": "Media Markt has a 10% discout for you",
+            "label": "Get 10% off",
+            "link": "http://www.mediamark.ch"
+          }
+        },
+        "comments": [
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic2.png",
+            "text": "@claudia_c Have you reached your goal yet?"
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic1.png",
+            "text": "New user joined: @patrick has accepted the challenge! 🤪🤪"
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic3.png",
+            "text": "@daniel68 bought a brand new Vespa and saved 10%! 🏆 🥇🥇🥇 "
+          }
+        ]
+      },
+      "b77": {
+        "id": "b77",
+        "actualTotalSaving": 14450,
+        "benefit": "We will double your donation",
+        "deadline": "2018-07-14",
+        "description": "I want to save money for donation for children in Africa.",
+        "numberOfFollowers": 287,
+        "image": "https://www.lunchdealer.at/tests/dreams/img/person-black-and-white-people-girl-photography-boy-1373031-pxhere.com.jpg",
+        "name": "Donations",
+        "peers": "12A95B48-7537-4A62-B221-6CE9F74ECACC",
+        "progress": 0.35,
+        "rewardImage": "https://www.lunchdealer.at/tests/dreams/img/100daysui_100icon.png",
+        "rewardTextSuccess": "You have reached your goal! Have a nice vacation with TUI! 😎😎😎",
+        "target": 200,
+        "targetTotalSaving": 57400,
+        "vendor": "Caritas",
+        "coupons": {
+          "c03": {
+            "text": "Get free drink to your lunch at McDonals",
+            "label": "Get a free drink",
+            "link": "http://www.mcdonals.ch"
+          }
+        },
+        "comments": [
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic2.png",
+            "text": "@claudia_c Have you reached your goal yet?"
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic1.png",
+            "text": "New user joined: @patrick has accepted the challenge! 🤪🤪"
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic3.png",
+            "text": "@daniel68 bought a brand new Vespa and saved 10%! 🏆 🥇🥇🥇 "
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic3.png",
+            "text": "@daniel68 bought a brand new Vespa and saved 10%! 🏆 🥇🥇🥇 "
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic3.png",
+            "text": "@daniel68 bought a brand new Vespa and saved 10%! 🏆 🥇🥇🥇 "
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic3.png",
+            "text": "@daniel68 bought a brand new Vespa and saved 10%! 🏆 🥇🥇🥇 "
+          },
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic3.png",
+            "text": "@daniel68 bought a brand new Vespa and saved 10%! 🏆 🥇🥇🥇 "
+          }
+        ]
+      },
+      "c77": {
+        "id": "c77",
+        "actualTotalSaving": 110208,
+        "benefit": "Free service for 3 years",
+        "deadline": "2018-07-14",
+        "description": "Buy a brand new Seat and get a free service for 3 years.",
+        "numberOfFollowers": 22,
+        "image": "https://cdn.pixabay.com/photo/2017/08/12/12/00/seat-leon-2634185_1280.jpg",
+        "name": "Seat Ibiza",
+        "peers": "13A95B48-7537-4A62-B221-6CE9F74ECACC",
+        "progress": 0.32,
+        "rewardImage": "https://www.lunchdealer.at/tests/dreams/img/100daysui_100icon.png",
+        "rewardTextSuccess": "You have reached your goal! Have a nice vacation with TUI! 😎😎😎",
+        "target": 3500,
+        "targetTotalSaving": 344400,
+        "vendor": "Seat",
+        "comments": [
+          {
+            "image": "https://www.lunchdealer.at/tests/dreams/img/profilpic1.png",
+            "text": "New user joined: @patrick has accepted the challenge! 🤪🤪"
+          }
+        ]
+      }
+    },
+    "cashFlowModel": [
+      {
+        "forecast": {
+          "data": [
+            [
+              6.0858,
+              2.264,
+              2.688,
+              0.0312
+            ],
+            [
+              -0.9535,
+              3.2983,
+              -0.2891,
+              0.7809
+            ],
+            [
+              -0.1944,
+              1.8526,
+              -0.1049,
+              0.9194
+            ]
+          ],
+          "header": [
+            "Estimate",
+            "Std. Error",
+            "t value",
+            "Pr(>|t|)"
+          ],
+          "labels": [
+            "(Intercept)",
+            "shoes",
+            "coffee"
+          ]
+        },
+        "user": "6F7DEF8D-F602-410B-A9C5-700B4FDEFCC"
+      }
+    ],
+    "customers": [
+      {
+        "bankCredentials": {
+          "account": "CH40XXXXX",
+          "authToken": "<token>",
+          "endpoint": "",
+          "login": "<add details>"
+        },
+        "events": [
+          {
+            "actionLink": "http://www.freecoffee.ch",
+            "actionText": "Get a free coffee at Starbuchs",
+            "bodytext": "That's the very best ad",
+            "headertext": "Oh no! Too much coffee!",
+            "type": "ad"
+          },
+          {
+            "actionLink": "#",
+            "actionText": "Thank you!",
+            "bodytext": "You can save money for coffee if you get a boyfriend!",
+            "headertext": "Oh no! Too much coffee!",
+            "type": "advise"
+          }
+        ],
+        "id": "cus353453",
+        "image": "http://maxpixel.freegreatpicture.com/static/photo/2x/Face-The-Disappointment-Blonde-Sadness-Eyes-Woman-2066673.jpg",
+        "mail": "claudia@gmail.com",
+        "mobile": "+41 722 233 23 12",
+        "name": "Claudia Coiffeuse",
+        "peers": "11A95B48-7537-4A62-B221-6CE9F74ECACC",
+        "subscribedGoals": [
+          {
+            "goalId": "a53434534",
+            "actualBalance": 4182,
+            "progress": 0.2,
+            "startingAt": "2018-01-13",
+            "startingBalance": 3982
+          },
+          {
+            "goalId": "b77",
+            "actualBalance": 4182,
+            "progress": 0.1,
+            "startingAt": "2018-01-13",
+            "startingBalance": 3982
+          }
+        ],
+        "username": "claudia_c"
+      }
+    ],
+    "peers": [
+      {
+        "cashFlowModel": {
+          "data": [
+            [
+              4.5468,
+              3.1565,
+              1.4405,
+              0.1929
+            ],
+            [
+              1.684,
+              4.6522,
+              0.362,
+              0.7281
+            ],
+            [
+              -0.3767,
+              0.7364,
+              -0.5116,
+              0.6247
+            ]
+          ],
+          "header": [
+            "Estimate",
+            "Std. Error",
+            "t value",
+            "Pr(>|t|)"
+          ],
+          "labels": [
+            "(Intercept)",
+            "shoes",
+            "coffee"
+          ]
+        },
+        "id": "11A95B48-7537-4A62-B221-6CE9F74ECACC",
+        "name": "Female >25 Smoker",
+        "properties": [
+          {
+            "id": "Income",
+            "label": "> 4000 CHF"
+          },
+          {
+            "id": "Location",
+            "label": "Zurich"
+          },
+          {
+            "id": "Top 3 Spending",
+            "label": "Zoom Out"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -9,6 +9,7 @@ import { DBStructure } from './interfaces/db';
 import { Toolbar, AppBar, IconButton, Typography } from 'material-ui';
 import { AccountCircle, Menu as MenuIcon } from 'material-ui-icons';
 const logo = require('./logo.svg');
+const dbContents = require('./firebaseDataNew.json').app;
 
 type S = { db: DBStructure; showMenu?: boolean };
 
@@ -23,6 +24,7 @@ export default class App extends React.Component<{}, S> {
       const db: DBStructure = snapshot.val();
       this.setState({ db });
     });
+    this.setState({ db: dbContents as any });
   }
 
   componentWillUnmount() {
@@ -34,13 +36,13 @@ export default class App extends React.Component<{}, S> {
 
     return (
       <div>
-        <AppBar style={{backgroundColor: '#e91e63'}} position="static">
+        <AppBar style={{ backgroundColor: '#e91e63' }} position="static">
           <Toolbar>
             <IconButton color="inherit" aria-label="Menu" onClick={() => this.setState({ showMenu: !this.state.showMenu })}>
               <MenuIcon />
             </IconButton>
             <Typography style={{ flexGrow: 1 }} variant="title" color="inherit">
-              <img style={{marginLeft: '20px'}} src={logo}/>
+              <img style={{ marginLeft: '20px' }} src={logo} />
             </Typography>
             <div>
               <IconButton color="inherit">
