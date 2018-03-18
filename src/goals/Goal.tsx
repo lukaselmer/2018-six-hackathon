@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as db from '../interfaces/db';
 import Comments from './Comments';
 
-type P = { id: string; db: db.DBStructure };
+type P = { id: string, db: db.DBStructure };
 
 export default class Goal extends React.Component<P> {
   render() {
