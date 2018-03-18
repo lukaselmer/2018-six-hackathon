@@ -1,21 +1,38 @@
 import * as React from 'react';
 import { Comment as DBComment } from '../interfaces/db';
+import { Card, List, ListItem } from 'material-ui';
 
 type P = { comments: DBComment[] };
 
 export default class Comments extends React.Component<P> {
   render() {
-    return <div>{this.props.comments.map(c => this.renderComment(c))}</div>;
+    return (
+      <div style={{ margin: '20px 0' }}>
+        <Card>
+          <List component="nav">{this.props.comments.map(c => this.renderComment(c))}</List>
+        </Card>
+      </div>
+    );
   }
 
   private renderComment(comment: DBComment) {
+    const isLast = this.props.comments.slice().reverse()[0] === comment;
     return (
-      <div key={comment.text}>
-        <div>
-          <img src={comment.image} />
+      <ListItem divider={!isLast} key={comment.text}>
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            flexFlow: 'row',
+            alignItems: 'center'
+          }}
+        >
+          <div>
+            <img style={{ width: '39px', marginRight: '15px' }} src={comment.image} />
+          </div>
+          <div>{comment.text}</div>
         </div>
-        <div>{comment.text}</div>
-      </div>
+      </ListItem>
     );
   }
 }

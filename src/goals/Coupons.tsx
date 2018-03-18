@@ -8,7 +8,7 @@ type P = { coupons: Coupons };
 export default class CouponsComponent extends React.Component<P> {
   render() {
     return (
-      <div style={{ margin: '20px' }}>
+      <div style={{ margin: '20px 0' }}>
         <Card>
           <List component="nav">{Object.keys(this.props.coupons).map(k => this.renderCoupon(this.props.coupons[k]))}</List>
         </Card>
