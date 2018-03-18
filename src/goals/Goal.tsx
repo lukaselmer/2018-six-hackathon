@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as db from '../interfaces/db';
 import Comments from './Comments';
 
-type P = { id: string, db: db.DBStructure };
+type P = { id: string; db: db.DBStructure };
 
 export default class Goal extends React.Component<P> {
   render() {
@@ -10,18 +10,14 @@ export default class Goal extends React.Component<P> {
       <div>
         <div>{this.goal && this.goal.name}</div>
         <div>
-          <Comments
-            comments={[
-              { name: 'Marion', comment: 'I achieved my dream :D I am so happy!' },
-              { name: 'Lukas', comment: 'Absolutely love it!' }
-            ]}
-          />
+          <Comments comments={this.goal.comments} />
         </div>
       </div>
     );
   }
 
   private get goal() {
+    console.log(this.props.db.goals[this.props.id]);
     return this.props.db.goals[this.props.id];
   }
 }

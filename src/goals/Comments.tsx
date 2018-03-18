@@ -1,15 +1,20 @@
 import * as React from 'react';
+import { Comment as DBComment } from '../interfaces/db';
 
-type P = { comments: { name: string; comment: string }[] };
+type P = { comments: DBComment[] };
 
 export default class Comments extends React.Component<P> {
   render() {
+    return <div>{this.props.comments.map(c => this.renderComment(c))}</div>;
+  }
+
+  renderComment(comment: DBComment) {
     return (
       <div>
-        <div>{this.props.comments[0].name}</div>
-        <div>{this.props.comments[0].comment}</div>
-        <div>{this.props.comments[1].name}</div>
-        <div>{this.props.comments[1].comment}</div>
+        <div>
+          <img src={comment.image} />
+        </div>
+        <div>{comment.text}</div>
       </div>
     );
   }
