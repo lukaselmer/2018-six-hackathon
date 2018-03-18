@@ -1,15 +1,17 @@
 import * as React from 'react';
 import * as db from '../interfaces/db';
 import { Card, Typography, CardContent } from 'material-ui';
-const trophy = require('./trophy.png');
 import Button from './Button';
+import './Trophy.css';
+
+const trophy = require('./trophy.png');
 
 type P = { id: string; db: db.DBStructure };
 
 export default class Trophy extends React.Component<P> {
   render() {
     return (
-      <div style={{ width: '60%', marginLeft: '20%', marginRight: '20%' }}>
+      <div>
         <Card className="GoalItemCard" style={{ textAlign: 'center' }}>
           <div style={{ background: '#b9b7b7', paddingTop: '20px', paddingBottom: '20px' }}>
             <div style={{ textAlign: 'center' }}>
@@ -28,11 +30,11 @@ export default class Trophy extends React.Component<P> {
             </Typography>
           </CardContent>
 
-          <div style={{ display: 'flex', flexFlow: 'row', justifyContent: 'center', marginTop: '40px', paddingBottom: '60px' }}>
-            <div style={{ margin: '30px', width: '204px' }}>
+          <div className="TrophyButtons">
+            <div style={{ margin: '15px', minWidth: '204px' }}>
               <Button onClick={() => console.log('Redirect')} text="Share Your Success" />
             </div>
-            <div style={{ margin: '30px', width: '204px' }}>
+            <div style={{ margin: '15px', minWidth: '204px' }}>
               <Button onClick={() => console.log('Redirect')} text="Get Your Coupon" />
             </div>
           </div>
