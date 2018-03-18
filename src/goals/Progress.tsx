@@ -21,22 +21,22 @@ export default class Progress extends React.Component<P> {
                   style={{ height: '20px', borderRadius: '10.5px', backgroundColor: 'rgba(255, 255, 255, 0.66)' }}
                   color="secondary"
                   variant="determinate"
-                  value={this.goal.progress * 100}
+                  value={this.progress}
                 />
               </div>
               <div className="ProgressGoalInfos">
                 <div>
-                  <div className="ProgressGoalInfoTitle">{Math.floor(this.subscribedGoal.progress)}%</div>
+                  <div className="ProgressGoalInfoTitle">{this.progress} %</div>
                   <div>Funded</div>
                 </div>
                 <div className="ProgressGoalInfoBorderRight" />
                 <div>
-                  <div className="ProgressGoalInfoTitle">{this.saved()} CHF</div>
+                  <div className="ProgressGoalInfoTitle">{this.saved} CHF</div>
                   <div>Saved</div>
                 </div>
                 <div className="ProgressGoalInfoBorderRight" />
                 <div>
-                  <div className="ProgressGoalInfoTitle">{this.subscribedGoal.remainingDays}</div>
+                  <div className="ProgressGoalInfoTitle">{this.subscribedGoal.remainingDays} Days</div>
                   <div>to Go</div>
                 </div>
                 <div className="ProgressGoalInfoBorderRight" />
@@ -63,7 +63,11 @@ export default class Progress extends React.Component<P> {
     return this.props.subscribedGoal;
   }
 
-  private saved() {
-    return Math.floor(this.goal.target * this.subscribedGoal.progress / 100);
+  private get saved() {
+    return Math.floor(this.goal.target * this.progress / 100);
+  }
+
+  private get progress() {
+    return Math.floor(Math.min(100, this.subscribedGoal.progress));
   }
 }
