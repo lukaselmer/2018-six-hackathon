@@ -7,22 +7,15 @@ type P = { db: db.DBStructure };
 
 export default class SubscribedGoals extends React.Component<P> {
   render() {
-    return <ul>{this.subscribedGoals.map(sg => this.renderGoal(sg))}</ul>;
+    return <div style={{ display: 'flex', flexFlow: 'row', flexWrap: 'wrap' }}>{this.subscribedGoals.map(sg => this.renderGoal(sg))}</div>;
   }
 
   private renderGoal(subscribedGoal: db.SubscribedGoal) {
     return (
-      <div>
-        <div key={subscribedGoal.goalId}>
-          <Card style={{ width: '293px', height: '260px', backgroundColor: '#ffffff' }}>
-            <SubscribedGoalItem goal={this.goal(subscribedGoal.goalId)} />
-          </Card>
-        </div>
-        <div key={subscribedGoal.goalId}>
-          <Card style={{ width: '293px', height: '260px', backgroundColor: '#ffffff' }}>
-            <SubscribedGoalItem goal={this.goal(subscribedGoal.goalId)} />
-          </Card>
-        </div>
+      <div style={{ width: '50%' }} key={subscribedGoal.goalId}>
+        <Card style={{ margin: '20px' }}>
+          <SubscribedGoalItem goal={this.goal(subscribedGoal.goalId)} />
+        </Card>
       </div>
     );
   }
