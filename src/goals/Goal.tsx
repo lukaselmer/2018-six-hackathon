@@ -3,6 +3,7 @@ import * as db from '../interfaces/db';
 import Comments from './Comments';
 import Coupons from './Coupons';
 import Progress from './Progress';
+import Trophy from './Trophy';
 
 type P = { id: string; db: db.DBStructure };
 
@@ -10,6 +11,11 @@ export default class Goal extends React.Component<P> {
   render() {
     return (
       <div>
+        {this.subscribedGoal && (
+          <div>
+            <Trophy id={this.props.id} db={this.props.db} />
+          </div>
+        )}
         {this.subscribedGoal && (
           <div>
             <Progress goal={this.goal} subscribedGoal={this.subscribedGoal} />

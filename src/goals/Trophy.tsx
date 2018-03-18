@@ -38,7 +38,7 @@ export default class Trophy extends React.Component<P> {
               <Button onClick={() => console.log('Redirect')} text="Get Your Coupon" />
             </div>
           </div>
-        </Card>;
+        </Card>
       </div>
     );
   }
