@@ -79,8 +79,6 @@ function get_transactions(res: any, access_token: any, connection: any) {
       console.log(transactions[0].booking_date);
 
       transactions.forEach(function(transaction: any) {
-        const t = [{}];
-
         transactions_R[i] = {
           booking_text: transaction.booking_text,
           booking_date: transaction.booking_date.toISOString().substring(0, 10),
