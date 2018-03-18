@@ -18,5 +18,5 @@
     "noUnusedLocals": true,
     "baseUrl": "https://six-hackathon.firebaseapp.com/"
   },
-  "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest", "src/setupTests.ts"]
+  "exclude": ["node_modules", "build", "scripts", "acceptance-tests", "webpack", "jest", "src/setupTests.ts", "functions"]
 }
