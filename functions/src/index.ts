@@ -1,6 +1,6 @@
 import * as functions from 'firebase-functions';
-import * as figo from 'figo';
-import * as R from 'r-script';
+// import * as figo from 'figo';
+// import * as R from 'r-script';
 import * as firebase from 'firebase';
 
 const config = {
@@ -50,64 +50,64 @@ export const dreamsProgress = functions.https.onRequest((request, res) => {
   });
 });
 
-export const dreamsPrediction = functions.https.onRequest((request, res) => {
-  // Demo client
-  const client_id = 'CaESKmC8MAhNpDe5rvmWnSkRE_7pkkVIIgMwclgzGcQY'; // Demo client ID
-  const client_secret = 'STdzfv0GXtEj_bwYn7AgCVszN1kKq5BdgEIKOM_fzybQ'; // Demo client secret
+// export const dreamsPrediction = functions.https.onRequest((request, res) => {
+//   // Demo client
+//   const client_id = 'CaESKmC8MAhNpDe5rvmWnSkRE_7pkkVIIgMwclgzGcQY'; // Demo client ID
+//   const client_secret = 'STdzfv0GXtEj_bwYn7AgCVszN1kKq5BdgEIKOM_fzybQ'; // Demo client secret
 
-  const connection = new figo.Connection(client_id, client_secret);
+//   const connection = new figo.Connection(client_id, client_secret);
 
-  connection.credential_login('demo@figo.me', 'demo1234', null, null, null, null, function(error: any, token: any) {
-    if (error) {
-      console.error(error);
-    } else {
-      get_transactions(res, token.access_token, connection);
-    }
-  });
-});
+//   connection.credential_login('demo@figo.me', 'demo1234', null, null, null, null, function(error: any, token: any) {
+//     if (error) {
+//       console.error(error);
+//     } else {
+//       get_transactions(res, token.access_token, connection);
+//     }
+//   });
+// });
 
-function get_transactions(res: any, access_token: any, connection: any) {
-  const session = new figo.Session(access_token);
+// function get_transactions(res: any, access_token: any, connection: any) {
+//   const session = new figo.Session(access_token);
 
-  session.get_transactions(null, function(error: any, transactions: any) {
-    if (error) {
-      console.error(error);
-    } else {
-      const transactions_R = [{}];
-      let i = 0;
+//   session.get_transactions(null, function(error: any, transactions: any) {
+//     if (error) {
+//       console.error(error);
+//     } else {
+//       const transactions_R = [{}];
+//       let i = 0;
 
-      console.log(transactions[0].booking_date);
+//       console.log(transactions[0].booking_date);
 
-      transactions.forEach(function(transaction: any) {
-        transactions_R[i] = {
-          booking_text: transaction.booking_text,
-          booking_date: transaction.booking_date.toISOString().substring(0, 10),
-          id: transaction.transaction_id,
-          name: transaction.name,
-          amount: transaction.amount,
-          currency: transaction.currency
-        };
-        i++;
-      });
+//       transactions.forEach(function(transaction: any) {
+//         transactions_R[i] = {
+//           booking_text: transaction.booking_text,
+//           booking_date: transaction.booking_date.toISOString().substring(0, 10),
+//           id: transaction.transaction_id,
+//           name: transaction.name,
+//           amount: transaction.amount,
+//           currency: transaction.currency
+//         };
+//         i++;
+//       });
 
-      // Write to Firebase, Read from R, Direct handover not possible JSON too large
-      database
-        .ref('api/transactions/')
-        .set(transactions_R)
-        .then(() => {
-          // Call R to create cashflow predictions
-          R('src/cash-prediction.R')
-            .data({
-              transactions: transactions_R[0],
-              nGroups: 3,
-              fxn: 'mean'
-            })
-            .call(function(err, d) {
-              if (err) throw err;
+//       // Write to Firebase, Read from R, Direct handover not possible JSON too large
+//       database
+//         .ref('api/transactions/')
+//         .set(transactions_R)
+//         .then(() => {
+//           // Call R to create cashflow predictions
+//           R('src/cash-prediction.R')
+//             .data({
+//               transactions: transactions_R[0],
+//               nGroups: 3,
+//               fxn: 'mean'
+//             })
+//             .call(function(err, d) {
+//               if (err) throw err;
 
-              res.status(200).send(d);
-            });
-        });
-    }
-  });
-}
+//               res.status(200).send(d);
+//             });
+//         });
+//     }
+//   });
+// }
