@@ -14,6 +14,34 @@ const config = {
 };
 firebase.initializeApp(config);
 const database = firebase.database();
+exports.dreamsProgress = functions.https.onRequest((request, res) => {
+    const goalParam = request.query.goal;
+    const resetParam = request.query.reset;
+    if (goalParam == null) {
+        const goalParam = '0';
+    }
+    database.ref('app/customers/0/subscribedGoals/' + goalParam).once('value', function (g) {
+        const goalVal = g.val();
+        const goalNewVal = g.val();
+        if (resetParam == 'true') {
+            goalNewVal.progress = 20;
+            goalNewVal.remainingDays = 200;
+            goalNewVal.actualBalance = 4980;
+        }
+        else {
+            if (parseInt(goalVal.progress) <= 90) {
+                goalNewVal.progress = parseInt(goalVal.progress) + 10;
+            }
+            if (parseInt(goalVal.remainingDays) > 0) {
+                goalNewVal.remainingDays = parseInt(goalVal.remainingDays) - 25;
+            }
+            goalNewVal.actualBalance = parseInt(goalVal.actualBalance) + 150;
+        }
+        database.ref('app/customers/0/subscribedGoals/0').set(goalNewVal).then(() => {
+            res.send({ goalParam, goalVal, goalNewVal });
+        });
+    });
+});
 exports.dreamsPrediction = functions.https.onRequest((request, res) => {
     // Demo client
     var client_id = 'CaESKmC8MAhNpDe5rvmWnSkRE_7pkkVIIgMwclgzGcQY'; // Demo client ID
@@ -54,9 +82,11 @@ function get_transactions(res, access_token, connection) {
             // Write to Firebase, Read from R, Direct handover not possible JSON too large
             database.ref('api/transactions/').set(transactions_R).then(() => {
                 // Call R to create cashflow predictions
-                R("src/cash-prediction.R").data({ transactions: transactions_R[0],
+                R("src/cash-prediction.R").data({
+                    transactions: transactions_R[0],
                     nGroups: 3,
-                    fxn: "mean" }).call(function (err, d) {
+                    fxn: "mean"
+                }).call(function (err, d) {
                     if (err)
                         throw err;
                     res.status(200).send(d);
