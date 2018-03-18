@@ -21,7 +21,16 @@ export interface Goal {
   target: number;
   targetTotalSaving: number;
   vendor: string;
+  coupons: Coupons;
   comments: Comment[];
+}
+
+export type Coupons = { [key: string]: Coupon };
+
+export interface Coupon {
+  text: string;
+  label: string;
+  link: string;
 }
 
 export interface Comment {

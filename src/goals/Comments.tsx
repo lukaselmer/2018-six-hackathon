@@ -8,9 +8,9 @@ export default class Comments extends React.Component<P> {
     return <div>{this.props.comments.map(c => this.renderComment(c))}</div>;
   }
 
-  renderComment(comment: DBComment) {
+  private renderComment(comment: DBComment) {
     return (
-      <div>
+      <div key={comment.text}>
         <div>
           <img src={comment.image} />
         </div>

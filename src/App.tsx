@@ -126,11 +126,15 @@ export default class App extends React.Component<{}, S> {
             </div>
           </header>
         )}
-        <Switch>
-          <Route exact={true} path="/" render={() => <Goals goals={this.state.db.goals} />} />
-          <Route path="/goals/:id" render={props => this.renderGoal(props.match.params.id)} />
-          <Route path="/my-goals" render={() => this.renderSubscribedGoals()} />
-        </Switch>
+        <div className="AppContentContainer">
+          <div className="AppContentContainerInner">
+            <Switch>
+              <Route exact={true} path="/" render={() => <Goals goals={this.state.db.goals} />} />
+              <Route path="/goals/:id" render={props => this.renderGoal(props.match.params.id)} />
+              <Route path="/my-goals" render={() => this.renderSubscribedGoals()} />
+            </Switch>
+          </div>
+        </div>
       </div>
     );
   }
