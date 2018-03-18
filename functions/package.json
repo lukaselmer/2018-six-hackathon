@@ -1,5 +1,6 @@
 {
   "name": "functions",
+  "homepage" : "https://six-hackathon.firebaseapp.com",
   "scripts": {
     "lint": "tslint --project tsconfig.json",
     "build": "tsc",
