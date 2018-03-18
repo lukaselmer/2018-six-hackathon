@@ -11,11 +11,12 @@ export default class Goal extends React.Component<P> {
   render() {
     return (
       <div>
-        {this.subscribedGoal && (
-          <div>
-            <Trophy id={this.props.id} db={this.props.db} />
-          </div>
-        )}
+        {this.subscribedGoal &&
+          this.subscribedGoal.progress >= 99.99 && (
+            <div>
+              <Trophy id={this.props.id} db={this.props.db} />
+            </div>
+          )}
         {this.subscribedGoal && (
           <div>
             <Progress goal={this.goal} subscribedGoal={this.subscribedGoal} />
