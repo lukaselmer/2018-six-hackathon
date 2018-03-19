@@ -28,7 +28,7 @@ export const dreamsProgress = functions.https.onRequest((request, res) => {
     const goalNewVal = g.val();
 
     if (resetParam === 'true') {
-      goalNewVal.progress = 20;
+      goalNewVal.progress = 0;
       goalNewVal.remainingDays = 200;
       goalNewVal.actualBalance = 4980;
     } else {
@@ -36,13 +36,13 @@ export const dreamsProgress = functions.https.onRequest((request, res) => {
         goalNewVal.progress = parseInt(goalVal.progress) + 10;
       }
       if (parseInt(goalVal.remainingDays) > 0) {
-        goalNewVal.remainingDays = parseInt(goalVal.remainingDays) - 25;
+        goalNewVal.remainingDays = parseInt(goalVal.remainingDays) - 20;
       }
       goalNewVal.actualBalance = parseInt(goalVal.actualBalance) + 150;
     }
 
     database
-      .ref('app/customers/0/subscribedGoals/0')
+      .ref('app/customers/0/subscribedGoals/' + goalParam)
       .set(goalNewVal)
       .then(() => {
         res.send({ goalParam, goalVal, goalNewVal });
