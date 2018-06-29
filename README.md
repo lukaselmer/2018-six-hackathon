@@ -1,3 +1,9 @@
+# Screenshots
+
+![Dreams overview](data/1.png)
+![My Dream Success](data/2.png)
+![My Dream in Progress](data/3.png)
+
 # Ideas
 
 ## Why
